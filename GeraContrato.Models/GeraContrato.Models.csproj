@@ -45,12 +45,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GeraContrato.DB\GeraContrato.DB.csproj">
-      <Project>{6fe845d1-2ccc-4f6f-98ec-b686ade6984a}</Project>
-      <Name>GeraContrato.DB</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="MySql.Data">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.12\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
     </Reference>

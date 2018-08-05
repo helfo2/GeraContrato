@@ -147,6 +147,7 @@
             this.SaveDataModelButton.TabIndex = 5;
             this.SaveDataModelButton.Text = "Criar modelo de dados";
             this.SaveDataModelButton.UseVisualStyleBackColor = true;
+            this.SaveDataModelButton.Click += new System.EventHandler(this.SaveDataModelButton_Click);
             // 
             // SelectDataModelPanel
             // 

@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.ContractPanel = new System.Windows.Forms.Panel();
+            this.ContractModelInfoGroupBox = new System.Windows.Forms.GroupBox();
+            this.SaveContractModelButton = new System.Windows.Forms.Button();
+            this.InsertContractTextLabel = new System.Windows.Forms.Label();
+            this.ContractModelTextBox = new System.Windows.Forms.RichTextBox();
             this.SelectContractModelPanel = new System.Windows.Forms.Panel();
             this.SelectContractModelLabel = new System.Windows.Forms.Label();
             this.ManageableDataModelsComboBox = new System.Windows.Forms.ComboBox();
@@ -36,14 +40,10 @@
             this.ChooseContractModelGroupBox = new System.Windows.Forms.GroupBox();
             this.CreateContractModelRadioButton = new System.Windows.Forms.RadioButton();
             this.UpdateContractModelRadioButton = new System.Windows.Forms.RadioButton();
-            this.ContractModelInfoGroupBox = new System.Windows.Forms.GroupBox();
-            this.txtContractModel = new System.Windows.Forms.RichTextBox();
-            this.lblInsertText = new System.Windows.Forms.Label();
-            this.SaveContractModelButton = new System.Windows.Forms.Button();
             this.ContractPanel.SuspendLayout();
+            this.ContractModelInfoGroupBox.SuspendLayout();
             this.SelectContractModelPanel.SuspendLayout();
             this.ChooseContractModelGroupBox.SuspendLayout();
-            this.ContractModelInfoGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // ContractPanel
@@ -56,6 +56,44 @@
             this.ContractPanel.Name = "ContractPanel";
             this.ContractPanel.Size = new System.Drawing.Size(829, 533);
             this.ContractPanel.TabIndex = 0;
+            // 
+            // ContractModelInfoGroupBox
+            // 
+            this.ContractModelInfoGroupBox.Controls.Add(this.SaveContractModelButton);
+            this.ContractModelInfoGroupBox.Controls.Add(this.InsertContractTextLabel);
+            this.ContractModelInfoGroupBox.Controls.Add(this.ContractModelTextBox);
+            this.ContractModelInfoGroupBox.Location = new System.Drawing.Point(299, 106);
+            this.ContractModelInfoGroupBox.Name = "ContractModelInfoGroupBox";
+            this.ContractModelInfoGroupBox.Size = new System.Drawing.Size(503, 394);
+            this.ContractModelInfoGroupBox.TabIndex = 15;
+            this.ContractModelInfoGroupBox.TabStop = false;
+            this.ContractModelInfoGroupBox.Text = "Modelo de Contratos";
+            // 
+            // SaveContractModelButton
+            // 
+            this.SaveContractModelButton.Location = new System.Drawing.Point(349, 343);
+            this.SaveContractModelButton.Name = "SaveContractModelButton";
+            this.SaveContractModelButton.Size = new System.Drawing.Size(100, 38);
+            this.SaveContractModelButton.TabIndex = 5;
+            this.SaveContractModelButton.Text = "Criar modelo de contratos";
+            this.SaveContractModelButton.UseVisualStyleBackColor = true;
+            // 
+            // InsertContractTextLabel
+            // 
+            this.InsertContractTextLabel.AutoSize = true;
+            this.InsertContractTextLabel.Location = new System.Drawing.Point(54, 35);
+            this.InsertContractTextLabel.Name = "InsertContractTextLabel";
+            this.InsertContractTextLabel.Size = new System.Drawing.Size(118, 13);
+            this.InsertContractTextLabel.TabIndex = 3;
+            this.InsertContractTextLabel.Text = "Por favor, insira o texto:";
+            // 
+            // ContractModelTextBox
+            // 
+            this.ContractModelTextBox.Location = new System.Drawing.Point(57, 62);
+            this.ContractModelTextBox.Name = "ContractModelTextBox";
+            this.ContractModelTextBox.Size = new System.Drawing.Size(392, 275);
+            this.ContractModelTextBox.TabIndex = 4;
+            this.ContractModelTextBox.Text = "";
             // 
             // SelectContractModelPanel
             // 
@@ -128,44 +166,6 @@
             this.UpdateContractModelRadioButton.UseVisualStyleBackColor = true;
             this.UpdateContractModelRadioButton.CheckedChanged += new System.EventHandler(this.UpdateContractModelRadioButton_CheckedChanged);
             // 
-            // ContractModelInfoGroupBox
-            // 
-            this.ContractModelInfoGroupBox.Controls.Add(this.SaveContractModelButton);
-            this.ContractModelInfoGroupBox.Controls.Add(this.lblInsertText);
-            this.ContractModelInfoGroupBox.Controls.Add(this.txtContractModel);
-            this.ContractModelInfoGroupBox.Location = new System.Drawing.Point(299, 106);
-            this.ContractModelInfoGroupBox.Name = "ContractModelInfoGroupBox";
-            this.ContractModelInfoGroupBox.Size = new System.Drawing.Size(503, 394);
-            this.ContractModelInfoGroupBox.TabIndex = 15;
-            this.ContractModelInfoGroupBox.TabStop = false;
-            this.ContractModelInfoGroupBox.Text = "Modelo de Contratos";
-            // 
-            // txtContractModel
-            // 
-            this.txtContractModel.Location = new System.Drawing.Point(57, 62);
-            this.txtContractModel.Name = "txtContractModel";
-            this.txtContractModel.Size = new System.Drawing.Size(392, 275);
-            this.txtContractModel.TabIndex = 4;
-            this.txtContractModel.Text = "";
-            // 
-            // lblInsertText
-            // 
-            this.lblInsertText.AutoSize = true;
-            this.lblInsertText.Location = new System.Drawing.Point(54, 35);
-            this.lblInsertText.Name = "lblInsertText";
-            this.lblInsertText.Size = new System.Drawing.Size(118, 13);
-            this.lblInsertText.TabIndex = 3;
-            this.lblInsertText.Text = "Por favor, insira o texto:";
-            // 
-            // SaveContractModelButton
-            // 
-            this.SaveContractModelButton.Location = new System.Drawing.Point(349, 343);
-            this.SaveContractModelButton.Name = "SaveContractModelButton";
-            this.SaveContractModelButton.Size = new System.Drawing.Size(100, 38);
-            this.SaveContractModelButton.TabIndex = 5;
-            this.SaveContractModelButton.Text = "Criar modelo de contratos";
-            this.SaveContractModelButton.UseVisualStyleBackColor = true;
-            // 
             // ContractModelUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -174,12 +174,12 @@
             this.Name = "ContractModelUserControl";
             this.Size = new System.Drawing.Size(829, 533);
             this.ContractPanel.ResumeLayout(false);
+            this.ContractModelInfoGroupBox.ResumeLayout(false);
+            this.ContractModelInfoGroupBox.PerformLayout();
             this.SelectContractModelPanel.ResumeLayout(false);
             this.SelectContractModelPanel.PerformLayout();
             this.ChooseContractModelGroupBox.ResumeLayout(false);
             this.ChooseContractModelGroupBox.PerformLayout();
-            this.ContractModelInfoGroupBox.ResumeLayout(false);
-            this.ContractModelInfoGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -196,7 +196,7 @@
         private System.Windows.Forms.Button DeleteContractModelButton;
         private System.Windows.Forms.GroupBox ContractModelInfoGroupBox;
         private System.Windows.Forms.Button SaveContractModelButton;
-        private System.Windows.Forms.Label lblInsertText;
-        private System.Windows.Forms.RichTextBox txtContractModel;
+        private System.Windows.Forms.Label InsertContractTextLabel;
+        private System.Windows.Forms.RichTextBox ContractModelTextBox;
     }
 }

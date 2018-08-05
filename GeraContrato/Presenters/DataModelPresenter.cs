@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GeraContrato.Views.DataModel;
-using GeraContrato.Models;
+﻿using GeraContrato.Views.DataModel;
+using GeraContrato.Entities;
 
 namespace GeraContrato.Presenters
 {
     class DataModelPresenter
     {
         IDataModel dataModelView;
+        DataModel dataModel;
 
         public DataModelPresenter(IDataModel view)
         {
@@ -31,6 +27,21 @@ namespace GeraContrato.Presenters
             {
                 dataModelView.DataItems.Items.Remove(dataModelView.NewSelectedItem);
             }
+        }
+
+        private void BeforeCommitNew()
+        {
+            dataModel = new DataModel
+            {
+                Id = null,
+                Name = dataModelView.Name
+            };
+        }
+
+        public void CommitNew()
+        {
+            BeforeCommitNew();
+            dataModel.NewDataModel();
         }
     }
 }

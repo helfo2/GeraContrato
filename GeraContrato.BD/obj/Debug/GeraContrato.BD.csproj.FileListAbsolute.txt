@@ -1,0 +1,9 @@
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.BD\bin\Debug\GeraContrato.BD.dll
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.BD\bin\Debug\GeraContrato.BD.pdb
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.BD\bin\Debug\MySql.Data.dll
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.BD\bin\Debug\Google.Protobuf.dll
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.BD\bin\Debug\MySql.Data.xml
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.BD\obj\Debug\GeraContrato.BD.csprojResolveAssemblyReference.cache
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.BD\obj\Debug\GeraContrato.BD.csproj.CoreCompileInputs.cache
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.BD\obj\Debug\GeraContrato.BD.dll
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.BD\obj\Debug\GeraContrato.BD.pdb

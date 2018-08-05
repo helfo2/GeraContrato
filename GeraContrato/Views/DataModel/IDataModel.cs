@@ -9,6 +9,8 @@ namespace GeraContrato.Views.DataModel
 {
     public interface IDataModel
     {
+        string Name { get; set; }
+
         string Item { get; set; }
 
         string NewSelectedItem { get; }        

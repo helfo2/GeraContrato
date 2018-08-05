@@ -45,8 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\ContractModel.cs" />
-    <Compile Include="Models\DataModel.cs" />
+    <Compile Include="Entities\ContractModel.cs" />
+    <Compile Include="Entities\DataModel.cs" />
+    <Compile Include="Entities\DataModelItem.cs" />
     <Compile Include="Presenters\ContractModelPresenter.cs" />
     <Compile Include="Presenters\DataModelPresenter.cs" />
     <Compile Include="Views\ContractModel\ContractModelUserControl.cs">
@@ -114,6 +115,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\GeraContrato.Model\GeraContrato.Model.csproj">
+      <Project>{234915c7-460a-4e6b-a0d1-daaf29a95912}</Project>
+      <Name>GeraContrato.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

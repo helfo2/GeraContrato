@@ -10,6 +10,22 @@ namespace GeraContrato.Views
 
         #region Interface
         
+        public string Name
+        {
+            get
+            {
+                return DataModelNameTextBox.Text;
+            }
+
+            set
+            {
+                if(DataModelNameTextBox.Text != value)
+                {
+                    DataModelNameTextBox.Text = value;
+                }
+            }
+        }
+
         /// <summary>
         /// The new item name.
         /// </summary>
@@ -105,6 +121,11 @@ namespace GeraContrato.Views
                 SelectDataModelPanel.Show();
                 DataModelInfoGroupBox.Hide();
             }            
+        }
+
+        private void SaveDataModelButton_Click(object sender, EventArgs e)
+        {
+            dataModelPresenter.CommitNew();
         }
     }
 }

@@ -12,12 +12,35 @@ namespace GeraContrato.Views
         /// <summary>
         /// The contract text
         /// </summary>
-        public string ContractText { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string ContractText
+        {
+            get
+            {
+                return ContractModelTextBox.Text;
+            }
+            set
+            {
+                if(ContractModelTextBox.Text != value)
+                {
+                    ContractModelTextBox.Text = value;
+                }
+            }
+        }
 
         /// <summary>
         /// The contract blanks to be replaced
         /// </summary>
-        public List<int> BlankPositions { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public List<int> BlankPositions
+        {
+            get
+            {
+                return null;
+            }
+            set
+            {
+
+            }
+        }
 
         #endregion
 
