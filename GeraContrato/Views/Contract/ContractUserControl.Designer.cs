@@ -77,7 +77,7 @@
             this.Controls.Add(this.cmbContractModels);
             this.Controls.Add(this.lblContractModel);
             this.Name = "ContractUserControl";
-            this.Size = new System.Drawing.Size(723, 420);
+            this.Size = new System.Drawing.Size(829, 533);
             this.ResumeLayout(false);
             this.PerformLayout();
 

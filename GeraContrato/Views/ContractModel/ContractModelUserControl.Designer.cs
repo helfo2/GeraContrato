@@ -29,139 +29,142 @@
         private void InitializeComponent()
         {
             this.ContractPanel = new System.Windows.Forms.Panel();
-            this.tabControlContractModels = new System.Windows.Forms.TabControl();
-            this.tabPageNewContractModel = new System.Windows.Forms.TabPage();
-            this.btnNewContractModel = new System.Windows.Forms.Button();
-            this.lblInsertText = new System.Windows.Forms.Label();
+            this.SelectContractModelPanel = new System.Windows.Forms.Panel();
+            this.SelectContractModelLabel = new System.Windows.Forms.Label();
+            this.ManageableDataModelsComboBox = new System.Windows.Forms.ComboBox();
+            this.DeleteContractModelButton = new System.Windows.Forms.Button();
+            this.ChooseContractModelGroupBox = new System.Windows.Forms.GroupBox();
+            this.CreateContractModelRadioButton = new System.Windows.Forms.RadioButton();
+            this.UpdateContractModelRadioButton = new System.Windows.Forms.RadioButton();
+            this.ContractModelInfoGroupBox = new System.Windows.Forms.GroupBox();
             this.txtContractModel = new System.Windows.Forms.RichTextBox();
-            this.tabPageManageContractModels = new System.Windows.Forms.TabPage();
-            this.btnUpdateContractModel = new System.Windows.Forms.Button();
-            this.richTextBoxUpdateContractModel = new System.Windows.Forms.RichTextBox();
-            this.btnRemoveContractModel = new System.Windows.Forms.Button();
-            this.cmbManageableContractModels = new System.Windows.Forms.ComboBox();
-            this.lblSelectContractModel = new System.Windows.Forms.Label();
+            this.lblInsertText = new System.Windows.Forms.Label();
+            this.SaveContractModelButton = new System.Windows.Forms.Button();
             this.ContractPanel.SuspendLayout();
-            this.tabControlContractModels.SuspendLayout();
-            this.tabPageNewContractModel.SuspendLayout();
-            this.tabPageManageContractModels.SuspendLayout();
+            this.SelectContractModelPanel.SuspendLayout();
+            this.ChooseContractModelGroupBox.SuspendLayout();
+            this.ContractModelInfoGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // ContractPanel
             // 
-            this.ContractPanel.Controls.Add(this.tabControlContractModels);
+            this.ContractPanel.Controls.Add(this.ContractModelInfoGroupBox);
+            this.ContractPanel.Controls.Add(this.SelectContractModelPanel);
+            this.ContractPanel.Controls.Add(this.ChooseContractModelGroupBox);
             this.ContractPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ContractPanel.Location = new System.Drawing.Point(0, 0);
             this.ContractPanel.Name = "ContractPanel";
-            this.ContractPanel.Size = new System.Drawing.Size(808, 433);
+            this.ContractPanel.Size = new System.Drawing.Size(829, 533);
             this.ContractPanel.TabIndex = 0;
             // 
-            // tabControlContractModels
+            // SelectContractModelPanel
             // 
-            this.tabControlContractModels.Controls.Add(this.tabPageNewContractModel);
-            this.tabControlContractModels.Controls.Add(this.tabPageManageContractModels);
-            this.tabControlContractModels.Location = new System.Drawing.Point(60, 31);
-            this.tabControlContractModels.Name = "tabControlContractModels";
-            this.tabControlContractModels.SelectedIndex = 0;
-            this.tabControlContractModels.Size = new System.Drawing.Size(689, 381);
-            this.tabControlContractModels.TabIndex = 3;
+            this.SelectContractModelPanel.Controls.Add(this.SelectContractModelLabel);
+            this.SelectContractModelPanel.Controls.Add(this.ManageableDataModelsComboBox);
+            this.SelectContractModelPanel.Controls.Add(this.DeleteContractModelButton);
+            this.SelectContractModelPanel.Location = new System.Drawing.Point(18, 106);
+            this.SelectContractModelPanel.Name = "SelectContractModelPanel";
+            this.SelectContractModelPanel.Size = new System.Drawing.Size(275, 202);
+            this.SelectContractModelPanel.TabIndex = 14;
             // 
-            // tabPageNewContractModel
+            // SelectContractModelLabel
             // 
-            this.tabPageNewContractModel.Controls.Add(this.btnNewContractModel);
-            this.tabPageNewContractModel.Controls.Add(this.lblInsertText);
-            this.tabPageNewContractModel.Controls.Add(this.txtContractModel);
-            this.tabPageNewContractModel.Location = new System.Drawing.Point(4, 22);
-            this.tabPageNewContractModel.Name = "tabPageNewContractModel";
-            this.tabPageNewContractModel.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageNewContractModel.Size = new System.Drawing.Size(681, 355);
-            this.tabPageNewContractModel.TabIndex = 0;
-            this.tabPageNewContractModel.Text = "Novo";
-            this.tabPageNewContractModel.UseVisualStyleBackColor = true;
+            this.SelectContractModelLabel.AutoSize = true;
+            this.SelectContractModelLabel.Location = new System.Drawing.Point(8, 22);
+            this.SelectContractModelLabel.Name = "SelectContractModelLabel";
+            this.SelectContractModelLabel.Size = new System.Drawing.Size(252, 13);
+            this.SelectContractModelLabel.TabIndex = 1;
+            this.SelectContractModelLabel.Text = "Selecione um modelo de contratos para gerenciá-lo:";
             // 
-            // btnNewContractModel
+            // ManageableDataModelsComboBox
             // 
-            this.btnNewContractModel.Location = new System.Drawing.Point(527, 268);
-            this.btnNewContractModel.Name = "btnNewContractModel";
-            this.btnNewContractModel.Size = new System.Drawing.Size(100, 38);
-            this.btnNewContractModel.TabIndex = 2;
-            this.btnNewContractModel.Text = "Criar modelo de contratos";
-            this.btnNewContractModel.UseVisualStyleBackColor = true;
-            this.btnNewContractModel.Click += new System.EventHandler(this.btnNewContractModel_Click);
+            this.ManageableDataModelsComboBox.FormattingEnabled = true;
+            this.ManageableDataModelsComboBox.Location = new System.Drawing.Point(11, 50);
+            this.ManageableDataModelsComboBox.Name = "ManageableDataModelsComboBox";
+            this.ManageableDataModelsComboBox.Size = new System.Drawing.Size(234, 21);
+            this.ManageableDataModelsComboBox.TabIndex = 2;
+            // 
+            // DeleteContractModelButton
+            // 
+            this.DeleteContractModelButton.Location = new System.Drawing.Point(11, 77);
+            this.DeleteContractModelButton.Name = "DeleteContractModelButton";
+            this.DeleteContractModelButton.Size = new System.Drawing.Size(234, 36);
+            this.DeleteContractModelButton.TabIndex = 9;
+            this.DeleteContractModelButton.Text = "Deletar este modelo de contratos";
+            this.DeleteContractModelButton.UseVisualStyleBackColor = true;
+            // 
+            // ChooseContractModelGroupBox
+            // 
+            this.ChooseContractModelGroupBox.Controls.Add(this.CreateContractModelRadioButton);
+            this.ChooseContractModelGroupBox.Controls.Add(this.UpdateContractModelRadioButton);
+            this.ChooseContractModelGroupBox.Location = new System.Drawing.Point(18, 20);
+            this.ChooseContractModelGroupBox.Name = "ChooseContractModelGroupBox";
+            this.ChooseContractModelGroupBox.Size = new System.Drawing.Size(784, 80);
+            this.ChooseContractModelGroupBox.TabIndex = 13;
+            this.ChooseContractModelGroupBox.TabStop = false;
+            this.ChooseContractModelGroupBox.Text = "Selecione uma opção";
+            // 
+            // CreateContractModelRadioButton
+            // 
+            this.CreateContractModelRadioButton.AutoSize = true;
+            this.CreateContractModelRadioButton.Checked = true;
+            this.CreateContractModelRadioButton.Location = new System.Drawing.Point(10, 24);
+            this.CreateContractModelRadioButton.Name = "CreateContractModelRadioButton";
+            this.CreateContractModelRadioButton.Size = new System.Drawing.Size(172, 17);
+            this.CreateContractModelRadioButton.TabIndex = 10;
+            this.CreateContractModelRadioButton.TabStop = true;
+            this.CreateContractModelRadioButton.Text = "Criar novo modelo de contratos";
+            this.CreateContractModelRadioButton.UseVisualStyleBackColor = true;
+            this.CreateContractModelRadioButton.CheckedChanged += new System.EventHandler(this.CreateContractModelRadioButton_CheckedChanged);
+            // 
+            // UpdateContractModelRadioButton
+            // 
+            this.UpdateContractModelRadioButton.AutoSize = true;
+            this.UpdateContractModelRadioButton.Location = new System.Drawing.Point(10, 47);
+            this.UpdateContractModelRadioButton.Name = "UpdateContractModelRadioButton";
+            this.UpdateContractModelRadioButton.Size = new System.Drawing.Size(208, 17);
+            this.UpdateContractModelRadioButton.TabIndex = 11;
+            this.UpdateContractModelRadioButton.Text = "Usar um modelo de contratos existente";
+            this.UpdateContractModelRadioButton.UseVisualStyleBackColor = true;
+            this.UpdateContractModelRadioButton.CheckedChanged += new System.EventHandler(this.UpdateContractModelRadioButton_CheckedChanged);
+            // 
+            // ContractModelInfoGroupBox
+            // 
+            this.ContractModelInfoGroupBox.Controls.Add(this.SaveContractModelButton);
+            this.ContractModelInfoGroupBox.Controls.Add(this.lblInsertText);
+            this.ContractModelInfoGroupBox.Controls.Add(this.txtContractModel);
+            this.ContractModelInfoGroupBox.Location = new System.Drawing.Point(299, 106);
+            this.ContractModelInfoGroupBox.Name = "ContractModelInfoGroupBox";
+            this.ContractModelInfoGroupBox.Size = new System.Drawing.Size(503, 394);
+            this.ContractModelInfoGroupBox.TabIndex = 15;
+            this.ContractModelInfoGroupBox.TabStop = false;
+            this.ContractModelInfoGroupBox.Text = "Modelo de Contratos";
+            // 
+            // txtContractModel
+            // 
+            this.txtContractModel.Location = new System.Drawing.Point(57, 62);
+            this.txtContractModel.Name = "txtContractModel";
+            this.txtContractModel.Size = new System.Drawing.Size(392, 275);
+            this.txtContractModel.TabIndex = 4;
+            this.txtContractModel.Text = "";
             // 
             // lblInsertText
             // 
             this.lblInsertText.AutoSize = true;
-            this.lblInsertText.Location = new System.Drawing.Point(5, 18);
+            this.lblInsertText.Location = new System.Drawing.Point(54, 35);
             this.lblInsertText.Name = "lblInsertText";
             this.lblInsertText.Size = new System.Drawing.Size(118, 13);
-            this.lblInsertText.TabIndex = 0;
+            this.lblInsertText.TabIndex = 3;
             this.lblInsertText.Text = "Por favor, insira o texto:";
             // 
-            // txtContractModel
+            // SaveContractModelButton
             // 
-            this.txtContractModel.Location = new System.Drawing.Point(129, 15);
-            this.txtContractModel.Name = "txtContractModel";
-            this.txtContractModel.Size = new System.Drawing.Size(392, 299);
-            this.txtContractModel.TabIndex = 1;
-            this.txtContractModel.Text = "";
-            // 
-            // tabPageManageContractModels
-            // 
-            this.tabPageManageContractModels.Controls.Add(this.btnUpdateContractModel);
-            this.tabPageManageContractModels.Controls.Add(this.richTextBoxUpdateContractModel);
-            this.tabPageManageContractModels.Controls.Add(this.btnRemoveContractModel);
-            this.tabPageManageContractModels.Controls.Add(this.cmbManageableContractModels);
-            this.tabPageManageContractModels.Controls.Add(this.lblSelectContractModel);
-            this.tabPageManageContractModels.Location = new System.Drawing.Point(4, 22);
-            this.tabPageManageContractModels.Name = "tabPageManageContractModels";
-            this.tabPageManageContractModels.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageManageContractModels.Size = new System.Drawing.Size(681, 355);
-            this.tabPageManageContractModels.TabIndex = 1;
-            this.tabPageManageContractModels.Text = "Gerenciar";
-            this.tabPageManageContractModels.UseVisualStyleBackColor = true;
-            // 
-            // btnUpdateContractModel
-            // 
-            this.btnUpdateContractModel.Location = new System.Drawing.Point(517, 293);
-            this.btnUpdateContractModel.Name = "btnUpdateContractModel";
-            this.btnUpdateContractModel.Size = new System.Drawing.Size(130, 43);
-            this.btnUpdateContractModel.TabIndex = 14;
-            this.btnUpdateContractModel.Text = "Salvar modelo de contratos";
-            this.btnUpdateContractModel.UseVisualStyleBackColor = true;
-            // 
-            // richTextBoxUpdateContractModel
-            // 
-            this.richTextBoxUpdateContractModel.Location = new System.Drawing.Point(21, 65);
-            this.richTextBoxUpdateContractModel.Name = "richTextBoxUpdateContractModel";
-            this.richTextBoxUpdateContractModel.Size = new System.Drawing.Size(356, 271);
-            this.richTextBoxUpdateContractModel.TabIndex = 13;
-            this.richTextBoxUpdateContractModel.Text = "";
-            // 
-            // btnRemoveContractModel
-            // 
-            this.btnRemoveContractModel.Location = new System.Drawing.Point(403, 14);
-            this.btnRemoveContractModel.Name = "btnRemoveContractModel";
-            this.btnRemoveContractModel.Size = new System.Drawing.Size(130, 50);
-            this.btnRemoveContractModel.TabIndex = 12;
-            this.btnRemoveContractModel.Text = "Deletar este modelo de contratos";
-            this.btnRemoveContractModel.UseVisualStyleBackColor = true;
-            // 
-            // cmbManageableContractModels
-            // 
-            this.cmbManageableContractModels.FormattingEnabled = true;
-            this.cmbManageableContractModels.Location = new System.Drawing.Point(276, 23);
-            this.cmbManageableContractModels.Name = "cmbManageableContractModels";
-            this.cmbManageableContractModels.Size = new System.Drawing.Size(121, 21);
-            this.cmbManageableContractModels.TabIndex = 11;
-            // 
-            // lblSelectContractModel
-            // 
-            this.lblSelectContractModel.AutoSize = true;
-            this.lblSelectContractModel.Location = new System.Drawing.Point(18, 26);
-            this.lblSelectContractModel.Name = "lblSelectContractModel";
-            this.lblSelectContractModel.Size = new System.Drawing.Size(252, 13);
-            this.lblSelectContractModel.TabIndex = 10;
-            this.lblSelectContractModel.Text = "Selecione um modelo de contratos para gerenciá-lo:";
+            this.SaveContractModelButton.Location = new System.Drawing.Point(349, 343);
+            this.SaveContractModelButton.Name = "SaveContractModelButton";
+            this.SaveContractModelButton.Size = new System.Drawing.Size(100, 38);
+            this.SaveContractModelButton.TabIndex = 5;
+            this.SaveContractModelButton.Text = "Criar modelo de contratos";
+            this.SaveContractModelButton.UseVisualStyleBackColor = true;
             // 
             // ContractModelUserControl
             // 
@@ -169,13 +172,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ContractPanel);
             this.Name = "ContractModelUserControl";
-            this.Size = new System.Drawing.Size(808, 433);
+            this.Size = new System.Drawing.Size(829, 533);
             this.ContractPanel.ResumeLayout(false);
-            this.tabControlContractModels.ResumeLayout(false);
-            this.tabPageNewContractModel.ResumeLayout(false);
-            this.tabPageNewContractModel.PerformLayout();
-            this.tabPageManageContractModels.ResumeLayout(false);
-            this.tabPageManageContractModels.PerformLayout();
+            this.SelectContractModelPanel.ResumeLayout(false);
+            this.SelectContractModelPanel.PerformLayout();
+            this.ChooseContractModelGroupBox.ResumeLayout(false);
+            this.ChooseContractModelGroupBox.PerformLayout();
+            this.ContractModelInfoGroupBox.ResumeLayout(false);
+            this.ContractModelInfoGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -183,16 +187,16 @@
         #endregion
 
         private System.Windows.Forms.Panel ContractPanel;
-        private System.Windows.Forms.TabControl tabControlContractModels;
-        private System.Windows.Forms.TabPage tabPageNewContractModel;
-        private System.Windows.Forms.Button btnNewContractModel;
+        private System.Windows.Forms.GroupBox ChooseContractModelGroupBox;
+        private System.Windows.Forms.RadioButton CreateContractModelRadioButton;
+        private System.Windows.Forms.RadioButton UpdateContractModelRadioButton;
+        private System.Windows.Forms.Panel SelectContractModelPanel;
+        private System.Windows.Forms.Label SelectContractModelLabel;
+        private System.Windows.Forms.ComboBox ManageableDataModelsComboBox;
+        private System.Windows.Forms.Button DeleteContractModelButton;
+        private System.Windows.Forms.GroupBox ContractModelInfoGroupBox;
+        private System.Windows.Forms.Button SaveContractModelButton;
         private System.Windows.Forms.Label lblInsertText;
         private System.Windows.Forms.RichTextBox txtContractModel;
-        private System.Windows.Forms.TabPage tabPageManageContractModels;
-        private System.Windows.Forms.Button btnUpdateContractModel;
-        private System.Windows.Forms.RichTextBox richTextBoxUpdateContractModel;
-        private System.Windows.Forms.Button btnRemoveContractModel;
-        private System.Windows.Forms.ComboBox cmbManageableContractModels;
-        private System.Windows.Forms.Label lblSelectContractModel;
     }
 }

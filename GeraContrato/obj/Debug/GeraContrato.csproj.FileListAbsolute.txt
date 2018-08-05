@@ -11,3 +11,16 @@ C:\Users\ELFO\Documents\joana\GeraContrato\GeraContrato\obj\Debug\GeraContrato.V
 C:\Users\ELFO\Documents\joana\GeraContrato\GeraContrato\obj\Debug\GeraContrato.Views.ContractUserControl.resources
 C:\Users\ELFO\Documents\joana\GeraContrato\GeraContrato\obj\Debug\GeraContrato.Views.DataModelUserControl.resources
 C:\Users\ELFO\Documents\joana\GeraContrato\GeraContrato\obj\Debug\GeraContrato.MainView.resources
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato\bin\Debug\GeraContrato.exe.config
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato\bin\Debug\GeraContrato.exe
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato\bin\Debug\GeraContrato.pdb
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato\obj\Debug\GeraContrato.csprojResolveAssemblyReference.cache
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato\obj\Debug\GeraContrato.Views.ContractModelUserControl.resources
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato\obj\Debug\GeraContrato.Views.ContractUserControl.resources
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato\obj\Debug\GeraContrato.Views.DataModelUserControl.resources
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato\obj\Debug\GeraContrato.MainView.resources
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato\obj\Debug\GeraContrato.Properties.Resources.resources
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato\obj\Debug\GeraContrato.csproj.GenerateResource.Cache
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato\obj\Debug\GeraContrato.csproj.CoreCompileInputs.cache
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato\obj\Debug\GeraContrato.exe
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato\obj\Debug\GeraContrato.pdb

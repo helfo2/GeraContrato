@@ -39,6 +39,7 @@
             // 
             // MainMenuPanel
             // 
+            this.MainMenuPanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.MainMenuPanel.Controls.Add(this.HelpLabel);
             this.MainMenuPanel.Controls.Add(this.DataModelsButton);
             this.MainMenuPanel.Controls.Add(this.ContractModelsButton);
@@ -46,13 +47,13 @@
             this.MainMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MainMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.MainMenuPanel.Name = "MainMenuPanel";
-            this.MainMenuPanel.Size = new System.Drawing.Size(146, 465);
+            this.MainMenuPanel.Size = new System.Drawing.Size(200, 533);
             this.MainMenuPanel.TabIndex = 0;
             // 
             // HelpLabel
             // 
             this.HelpLabel.AutoSize = true;
-            this.HelpLabel.Location = new System.Drawing.Point(54, 347);
+            this.HelpLabel.Location = new System.Drawing.Point(76, 373);
             this.HelpLabel.Name = "HelpLabel";
             this.HelpLabel.Size = new System.Drawing.Size(34, 13);
             this.HelpLabel.TabIndex = 3;
@@ -61,9 +62,10 @@
             // 
             // DataModelsButton
             // 
-            this.DataModelsButton.Location = new System.Drawing.Point(0, 136);
+            this.DataModelsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DataModelsButton.Location = new System.Drawing.Point(0, 124);
             this.DataModelsButton.Name = "DataModelsButton";
-            this.DataModelsButton.Size = new System.Drawing.Size(146, 62);
+            this.DataModelsButton.Size = new System.Drawing.Size(200, 62);
             this.DataModelsButton.TabIndex = 2;
             this.DataModelsButton.Text = "Modelo de Dados";
             this.DataModelsButton.UseVisualStyleBackColor = true;
@@ -71,9 +73,10 @@
             // 
             // ContractModelsButton
             // 
-            this.ContractModelsButton.Location = new System.Drawing.Point(0, 68);
+            this.ContractModelsButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ContractModelsButton.Location = new System.Drawing.Point(0, 62);
             this.ContractModelsButton.Name = "ContractModelsButton";
-            this.ContractModelsButton.Size = new System.Drawing.Size(146, 62);
+            this.ContractModelsButton.Size = new System.Drawing.Size(200, 62);
             this.ContractModelsButton.TabIndex = 1;
             this.ContractModelsButton.Text = "Modelo de Contratos";
             this.ContractModelsButton.UseVisualStyleBackColor = true;
@@ -81,9 +84,10 @@
             // 
             // ContractsButton
             // 
+            this.ContractsButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.ContractsButton.Location = new System.Drawing.Point(0, 0);
             this.ContractsButton.Name = "ContractsButton";
-            this.ContractsButton.Size = new System.Drawing.Size(146, 62);
+            this.ContractsButton.Size = new System.Drawing.Size(200, 62);
             this.ContractsButton.TabIndex = 0;
             this.ContractsButton.Text = "Novo Contrato";
             this.ContractsButton.UseVisualStyleBackColor = true;
@@ -92,17 +96,17 @@
             // MainPanel
             // 
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(146, 0);
+            this.MainPanel.Location = new System.Drawing.Point(200, 0);
             this.MainPanel.Margin = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(777, 465);
+            this.MainPanel.Size = new System.Drawing.Size(829, 533);
             this.MainPanel.TabIndex = 4;
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 465);
+            this.ClientSize = new System.Drawing.Size(1029, 533);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.MainMenuPanel);
             this.Name = "MainView";

@@ -1,0 +1,1 @@
+C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.Models\obj\Debug\GeraContrato.Models.csproj.CoreCompileInputs.cache

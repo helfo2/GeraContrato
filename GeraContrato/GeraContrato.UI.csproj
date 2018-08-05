@@ -46,12 +46,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\ContractModel.cs" />
+    <Compile Include="Models\DataModel.cs" />
+    <Compile Include="Presenters\ContractModelPresenter.cs" />
+    <Compile Include="Presenters\DataModelPresenter.cs" />
     <Compile Include="Views\ContractModel\ContractModelUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\ContractModel\ContractModelUserControl.Designer.cs">
       <DependentUpon>ContractModelUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ContractModel\IContractModel.cs" />
     <Compile Include="Views\Contract\ContractUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -65,6 +69,7 @@
     <Compile Include="Views\DataModel\DataModelUserControl.Designer.cs">
       <DependentUpon>DataModelUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\DataModel\IDataModel.cs" />
     <Compile Include="Views\Main\IMainView.cs" />
     <Compile Include="Views\Main\MainView.cs">
       <SubType>Form</SubType>
@@ -109,8 +114,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presenters\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

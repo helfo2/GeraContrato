@@ -1,0 +1,61 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETPortable,Version=v4.6,Profile=Profile44": {
+      "GeraContrato.DB/1.0.0": {
+        "type": "project",
+        "framework": ".NETPortable,Version=v4.6,Profile=Profile44"
+      }
+    }
+  },
+  "libraries": {
+    "GeraContrato.DB/1.0.0": {
+      "type": "project",
+      "path": "../GeraContrato.DB/project.json",
+      "msbuildProject": "../GeraContrato.DB/GeraContrato.DB.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "": [],
+    ".NETPortable,Version=v4.6,Profile=Profile44": []
+  },
+  "packageFolders": {
+    "C:\\Users\\ELFO\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
+  },
+  "project": {
+    "restore": {
+      "projectUniqueName": "C:\\Users\\ELFO\\Documents\\sistemas_joana\\GeraContrato\\GeraContrato.Models\\GeraContrato.Models.csproj",
+      "projectName": "GeraContrato.Models",
+      "projectPath": "C:\\Users\\ELFO\\Documents\\sistemas_joana\\GeraContrato\\GeraContrato.Models\\GeraContrato.Models.csproj",
+      "projectJsonPath": "C:\\Users\\ELFO\\Documents\\sistemas_joana\\GeraContrato\\GeraContrato.Models\\project.json",
+      "packagesPath": "C:\\Users\\ELFO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ELFO\\Documents\\sistemas_joana\\GeraContrato\\GeraContrato.Models\\obj\\",
+      "projectStyle": "ProjectJson",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\ELFO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "portable46-net451+win81": {
+          "projectReferences": {
+            "C:\\Users\\ELFO\\Documents\\sistemas_joana\\GeraContrato\\GeraContrato.DB\\GeraContrato.DB.csproj": {
+              "projectPath": "C:\\Users\\ELFO\\Documents\\sistemas_joana\\GeraContrato\\GeraContrato.DB\\GeraContrato.DB.csproj"
+            }
+          }
+        }
+      }
+    },
+    "frameworks": {
+      "portable46-net451+win81": {}
+    }
+  }
+}

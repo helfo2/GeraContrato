@@ -29,191 +29,195 @@
         private void InitializeComponent()
         {
             this.DataModelPanel = new System.Windows.Forms.Panel();
-            this.tabControlDataModel = new System.Windows.Forms.TabControl();
-            this.tabPageNewDataModel = new System.Windows.Forms.TabPage();
-            this.lblAddingInfo = new System.Windows.Forms.Label();
-            this.btnSaveDataModel = new System.Windows.Forms.Button();
-            this.btnRemoveNewDataItem = new System.Windows.Forms.Button();
-            this.listboxDataItems = new System.Windows.Forms.ListBox();
-            this.btnAddDataItem = new System.Windows.Forms.Button();
-            this.lblDataItemName = new System.Windows.Forms.Label();
-            this.txtDataItemName = new System.Windows.Forms.TextBox();
-            this.tabPageManageDataModels = new System.Windows.Forms.TabPage();
-            this.btnDeleteDataModel = new System.Windows.Forms.Button();
-            this.btnSaveDataModelChanges = new System.Windows.Forms.Button();
-            this.btnRemoveSelectedDataItem = new System.Windows.Forms.Button();
-            this.listBoxDataModelItems = new System.Windows.Forms.ListBox();
-            this.cmbManageableDataModels = new System.Windows.Forms.ComboBox();
-            this.lblSelectDataModel = new System.Windows.Forms.Label();
+            this.DataModelInfoGroupBox = new System.Windows.Forms.GroupBox();
+            this.DataModelNameLabel = new System.Windows.Forms.Label();
+            this.DataModelNameTextBox = new System.Windows.Forms.TextBox();
+            this.DataItemLabel = new System.Windows.Forms.Label();
+            this.AddDataItemButton = new System.Windows.Forms.Button();
+            this.RemoveNewDataItemButton = new System.Windows.Forms.Button();
+            this.DataItemTextBox = new System.Windows.Forms.TextBox();
+            this.NewDataItemsListBox = new System.Windows.Forms.ListBox();
+            this.SaveDataModelButton = new System.Windows.Forms.Button();
+            this.SelectDataModelPanel = new System.Windows.Forms.Panel();
+            this.SelectDataModelLabel = new System.Windows.Forms.Label();
+            this.ManageableDataModelsComboBox = new System.Windows.Forms.ComboBox();
+            this.DeleteDataModelButton = new System.Windows.Forms.Button();
+            this.ChooseDataModelGroupBox = new System.Windows.Forms.GroupBox();
+            this.CreateDataModelRadioButton = new System.Windows.Forms.RadioButton();
+            this.UpdateDataModelRadioButton = new System.Windows.Forms.RadioButton();
             this.DataModelPanel.SuspendLayout();
-            this.tabControlDataModel.SuspendLayout();
-            this.tabPageNewDataModel.SuspendLayout();
-            this.tabPageManageDataModels.SuspendLayout();
+            this.DataModelInfoGroupBox.SuspendLayout();
+            this.SelectDataModelPanel.SuspendLayout();
+            this.ChooseDataModelGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // DataModelPanel
             // 
-            this.DataModelPanel.Controls.Add(this.tabControlDataModel);
+            this.DataModelPanel.Controls.Add(this.DataModelInfoGroupBox);
+            this.DataModelPanel.Controls.Add(this.SelectDataModelPanel);
+            this.DataModelPanel.Controls.Add(this.ChooseDataModelGroupBox);
             this.DataModelPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DataModelPanel.Location = new System.Drawing.Point(0, 0);
             this.DataModelPanel.Name = "DataModelPanel";
-            this.DataModelPanel.Size = new System.Drawing.Size(635, 408);
+            this.DataModelPanel.Size = new System.Drawing.Size(829, 533);
             this.DataModelPanel.TabIndex = 0;
             // 
-            // tabControlDataModel
+            // DataModelInfoGroupBox
             // 
-            this.tabControlDataModel.Controls.Add(this.tabPageNewDataModel);
-            this.tabControlDataModel.Controls.Add(this.tabPageManageDataModels);
-            this.tabControlDataModel.Location = new System.Drawing.Point(20, 35);
-            this.tabControlDataModel.Name = "tabControlDataModel";
-            this.tabControlDataModel.SelectedIndex = 0;
-            this.tabControlDataModel.Size = new System.Drawing.Size(595, 338);
-            this.tabControlDataModel.TabIndex = 8;
+            this.DataModelInfoGroupBox.Controls.Add(this.DataModelNameLabel);
+            this.DataModelInfoGroupBox.Controls.Add(this.DataModelNameTextBox);
+            this.DataModelInfoGroupBox.Controls.Add(this.DataItemLabel);
+            this.DataModelInfoGroupBox.Controls.Add(this.AddDataItemButton);
+            this.DataModelInfoGroupBox.Controls.Add(this.RemoveNewDataItemButton);
+            this.DataModelInfoGroupBox.Controls.Add(this.DataItemTextBox);
+            this.DataModelInfoGroupBox.Controls.Add(this.NewDataItemsListBox);
+            this.DataModelInfoGroupBox.Controls.Add(this.SaveDataModelButton);
+            this.DataModelInfoGroupBox.Location = new System.Drawing.Point(278, 138);
+            this.DataModelInfoGroupBox.Name = "DataModelInfoGroupBox";
+            this.DataModelInfoGroupBox.Size = new System.Drawing.Size(541, 297);
+            this.DataModelInfoGroupBox.TabIndex = 7;
+            this.DataModelInfoGroupBox.TabStop = false;
+            this.DataModelInfoGroupBox.Text = "Modelo de Dados";
             // 
-            // tabPageNewDataModel
+            // DataModelNameLabel
             // 
-            this.tabPageNewDataModel.Controls.Add(this.lblAddingInfo);
-            this.tabPageNewDataModel.Controls.Add(this.btnSaveDataModel);
-            this.tabPageNewDataModel.Controls.Add(this.btnRemoveNewDataItem);
-            this.tabPageNewDataModel.Controls.Add(this.listboxDataItems);
-            this.tabPageNewDataModel.Controls.Add(this.btnAddDataItem);
-            this.tabPageNewDataModel.Controls.Add(this.lblDataItemName);
-            this.tabPageNewDataModel.Controls.Add(this.txtDataItemName);
-            this.tabPageNewDataModel.Location = new System.Drawing.Point(4, 22);
-            this.tabPageNewDataModel.Name = "tabPageNewDataModel";
-            this.tabPageNewDataModel.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageNewDataModel.Size = new System.Drawing.Size(587, 312);
-            this.tabPageNewDataModel.TabIndex = 0;
-            this.tabPageNewDataModel.Text = "Novo";
-            this.tabPageNewDataModel.UseVisualStyleBackColor = true;
+            this.DataModelNameLabel.AutoSize = true;
+            this.DataModelNameLabel.Location = new System.Drawing.Point(167, 37);
+            this.DataModelNameLabel.Name = "DataModelNameLabel";
+            this.DataModelNameLabel.Size = new System.Drawing.Size(38, 13);
+            this.DataModelNameLabel.TabIndex = 8;
+            this.DataModelNameLabel.Text = "Nome:";
             // 
-            // lblAddingInfo
+            // DataModelNameTextBox
             // 
-            this.lblAddingInfo.AutoSize = true;
-            this.lblAddingInfo.Location = new System.Drawing.Point(6, 12);
-            this.lblAddingInfo.Name = "lblAddingInfo";
-            this.lblAddingInfo.Size = new System.Drawing.Size(320, 13);
-            this.lblAddingInfo.TabIndex = 0;
-            this.lblAddingInfo.Text = "Adicione os campos conforme o necessário (a ordem não importa):";
+            this.DataModelNameTextBox.Location = new System.Drawing.Point(211, 34);
+            this.DataModelNameTextBox.Name = "DataModelNameTextBox";
+            this.DataModelNameTextBox.Size = new System.Drawing.Size(176, 20);
+            this.DataModelNameTextBox.TabIndex = 7;
             // 
-            // btnSaveDataModel
+            // DataItemLabel
             // 
-            this.btnSaveDataModel.Location = new System.Drawing.Point(420, 241);
-            this.btnSaveDataModel.Name = "btnSaveDataModel";
-            this.btnSaveDataModel.Size = new System.Drawing.Size(161, 65);
-            this.btnSaveDataModel.TabIndex = 5;
-            this.btnSaveDataModel.Text = "Criar modelo de dados";
-            this.btnSaveDataModel.UseVisualStyleBackColor = true;
+            this.DataItemLabel.AutoSize = true;
+            this.DataItemLabel.Location = new System.Drawing.Point(31, 78);
+            this.DataItemLabel.Name = "DataItemLabel";
+            this.DataItemLabel.Size = new System.Drawing.Size(118, 13);
+            this.DataItemLabel.TabIndex = 4;
+            this.DataItemLabel.Text = "Identificador do campo:";
             // 
-            // btnRemoveNewDataItem
+            // AddDataItemButton
             // 
-            this.btnRemoveNewDataItem.Location = new System.Drawing.Point(265, 222);
-            this.btnRemoveNewDataItem.Name = "btnRemoveNewDataItem";
-            this.btnRemoveNewDataItem.Size = new System.Drawing.Size(90, 39);
-            this.btnRemoveNewDataItem.TabIndex = 6;
-            this.btnRemoveNewDataItem.Text = "Remover selecionado";
-            this.btnRemoveNewDataItem.UseVisualStyleBackColor = true;
+            this.AddDataItemButton.Location = new System.Drawing.Point(211, 120);
+            this.AddDataItemButton.Name = "AddDataItemButton";
+            this.AddDataItemButton.Size = new System.Drawing.Size(90, 39);
+            this.AddDataItemButton.TabIndex = 2;
+            this.AddDataItemButton.Text = "Adicionar campo";
+            this.AddDataItemButton.UseVisualStyleBackColor = true;
+            this.AddDataItemButton.Click += new System.EventHandler(this.AddDataItemButton_Click);
             // 
-            // listboxDataItems
+            // RemoveNewDataItemButton
             // 
-            this.listboxDataItems.FormattingEnabled = true;
-            this.listboxDataItems.Location = new System.Drawing.Point(75, 101);
-            this.listboxDataItems.Name = "listboxDataItems";
-            this.listboxDataItems.Size = new System.Drawing.Size(174, 160);
-            this.listboxDataItems.TabIndex = 1;
+            this.RemoveNewDataItemButton.Location = new System.Drawing.Point(214, 241);
+            this.RemoveNewDataItemButton.Name = "RemoveNewDataItemButton";
+            this.RemoveNewDataItemButton.Size = new System.Drawing.Size(90, 39);
+            this.RemoveNewDataItemButton.TabIndex = 6;
+            this.RemoveNewDataItemButton.Text = "Remover selecionado";
+            this.RemoveNewDataItemButton.UseVisualStyleBackColor = true;
+            this.RemoveNewDataItemButton.Click += new System.EventHandler(this.RemoveNewDataItemButton_Click);
             // 
-            // btnAddDataItem
+            // DataItemTextBox
             // 
-            this.btnAddDataItem.Location = new System.Drawing.Point(265, 56);
-            this.btnAddDataItem.Name = "btnAddDataItem";
-            this.btnAddDataItem.Size = new System.Drawing.Size(90, 39);
-            this.btnAddDataItem.TabIndex = 2;
-            this.btnAddDataItem.Text = "Adicionar campo";
-            this.btnAddDataItem.UseVisualStyleBackColor = true;
+            this.DataItemTextBox.Location = new System.Drawing.Point(31, 94);
+            this.DataItemTextBox.Name = "DataItemTextBox";
+            this.DataItemTextBox.Size = new System.Drawing.Size(176, 20);
+            this.DataItemTextBox.TabIndex = 3;
             // 
-            // lblDataItemName
+            // NewDataItemsListBox
             // 
-            this.lblDataItemName.AutoSize = true;
-            this.lblDataItemName.Location = new System.Drawing.Point(70, 56);
-            this.lblDataItemName.Name = "lblDataItemName";
-            this.lblDataItemName.Size = new System.Drawing.Size(118, 13);
-            this.lblDataItemName.TabIndex = 4;
-            this.lblDataItemName.Text = "Identificador do campo:";
+            this.NewDataItemsListBox.FormattingEnabled = true;
+            this.NewDataItemsListBox.Location = new System.Drawing.Point(31, 120);
+            this.NewDataItemsListBox.Name = "NewDataItemsListBox";
+            this.NewDataItemsListBox.Size = new System.Drawing.Size(174, 160);
+            this.NewDataItemsListBox.TabIndex = 1;
             // 
-            // txtDataItemName
+            // SaveDataModelButton
             // 
-            this.txtDataItemName.Location = new System.Drawing.Point(73, 75);
-            this.txtDataItemName.Name = "txtDataItemName";
-            this.txtDataItemName.Size = new System.Drawing.Size(176, 20);
-            this.txtDataItemName.TabIndex = 3;
+            this.SaveDataModelButton.Location = new System.Drawing.Point(374, 226);
+            this.SaveDataModelButton.Name = "SaveDataModelButton";
+            this.SaveDataModelButton.Size = new System.Drawing.Size(161, 65);
+            this.SaveDataModelButton.TabIndex = 5;
+            this.SaveDataModelButton.Text = "Criar modelo de dados";
+            this.SaveDataModelButton.UseVisualStyleBackColor = true;
             // 
-            // tabPageManageDataModels
+            // SelectDataModelPanel
             // 
-            this.tabPageManageDataModels.Controls.Add(this.btnDeleteDataModel);
-            this.tabPageManageDataModels.Controls.Add(this.btnSaveDataModelChanges);
-            this.tabPageManageDataModels.Controls.Add(this.btnRemoveSelectedDataItem);
-            this.tabPageManageDataModels.Controls.Add(this.listBoxDataModelItems);
-            this.tabPageManageDataModels.Controls.Add(this.cmbManageableDataModels);
-            this.tabPageManageDataModels.Controls.Add(this.lblSelectDataModel);
-            this.tabPageManageDataModels.Location = new System.Drawing.Point(4, 22);
-            this.tabPageManageDataModels.Name = "tabPageManageDataModels";
-            this.tabPageManageDataModels.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageManageDataModels.Size = new System.Drawing.Size(587, 312);
-            this.tabPageManageDataModels.TabIndex = 1;
-            this.tabPageManageDataModels.Text = "Gerenciar";
-            this.tabPageManageDataModels.UseVisualStyleBackColor = true;
+            this.SelectDataModelPanel.Controls.Add(this.SelectDataModelLabel);
+            this.SelectDataModelPanel.Controls.Add(this.ManageableDataModelsComboBox);
+            this.SelectDataModelPanel.Controls.Add(this.DeleteDataModelButton);
+            this.SelectDataModelPanel.Location = new System.Drawing.Point(18, 138);
+            this.SelectDataModelPanel.Name = "SelectDataModelPanel";
+            this.SelectDataModelPanel.Size = new System.Drawing.Size(254, 202);
+            this.SelectDataModelPanel.TabIndex = 13;
             // 
-            // btnDeleteDataModel
+            // SelectDataModelLabel
             // 
-            this.btnDeleteDataModel.Location = new System.Drawing.Point(391, 8);
-            this.btnDeleteDataModel.Name = "btnDeleteDataModel";
-            this.btnDeleteDataModel.Size = new System.Drawing.Size(108, 36);
-            this.btnDeleteDataModel.TabIndex = 9;
-            this.btnDeleteDataModel.Text = "Deletar este modelo de dados";
-            this.btnDeleteDataModel.UseVisualStyleBackColor = true;
+            this.SelectDataModelLabel.AutoSize = true;
+            this.SelectDataModelLabel.Location = new System.Drawing.Point(8, 22);
+            this.SelectDataModelLabel.Name = "SelectDataModelLabel";
+            this.SelectDataModelLabel.Size = new System.Drawing.Size(237, 13);
+            this.SelectDataModelLabel.TabIndex = 1;
+            this.SelectDataModelLabel.Text = "Selecione um modelo de dados para gerenciá-lo:";
             // 
-            // btnSaveDataModelChanges
+            // ManageableDataModelsComboBox
             // 
-            this.btnSaveDataModelChanges.Location = new System.Drawing.Point(420, 241);
-            this.btnSaveDataModelChanges.Name = "btnSaveDataModelChanges";
-            this.btnSaveDataModelChanges.Size = new System.Drawing.Size(161, 65);
-            this.btnSaveDataModelChanges.TabIndex = 8;
-            this.btnSaveDataModelChanges.Text = "Salvar modelo de dados";
-            this.btnSaveDataModelChanges.UseVisualStyleBackColor = true;
+            this.ManageableDataModelsComboBox.FormattingEnabled = true;
+            this.ManageableDataModelsComboBox.Location = new System.Drawing.Point(11, 50);
+            this.ManageableDataModelsComboBox.Name = "ManageableDataModelsComboBox";
+            this.ManageableDataModelsComboBox.Size = new System.Drawing.Size(234, 21);
+            this.ManageableDataModelsComboBox.TabIndex = 2;
             // 
-            // btnRemoveSelectedDataItem
+            // DeleteDataModelButton
             // 
-            this.btnRemoveSelectedDataItem.Location = new System.Drawing.Point(255, 208);
-            this.btnRemoveSelectedDataItem.Name = "btnRemoveSelectedDataItem";
-            this.btnRemoveSelectedDataItem.Size = new System.Drawing.Size(90, 39);
-            this.btnRemoveSelectedDataItem.TabIndex = 7;
-            this.btnRemoveSelectedDataItem.Text = "Remover selecionado";
-            this.btnRemoveSelectedDataItem.UseVisualStyleBackColor = true;
+            this.DeleteDataModelButton.Location = new System.Drawing.Point(11, 77);
+            this.DeleteDataModelButton.Name = "DeleteDataModelButton";
+            this.DeleteDataModelButton.Size = new System.Drawing.Size(234, 36);
+            this.DeleteDataModelButton.TabIndex = 9;
+            this.DeleteDataModelButton.Text = "Deletar este modelo de dados";
+            this.DeleteDataModelButton.UseVisualStyleBackColor = true;
             // 
-            // listBoxDataModelItems
+            // ChooseDataModelGroupBox
             // 
-            this.listBoxDataModelItems.FormattingEnabled = true;
-            this.listBoxDataModelItems.Location = new System.Drawing.Point(24, 61);
-            this.listBoxDataModelItems.Name = "listBoxDataModelItems";
-            this.listBoxDataModelItems.Size = new System.Drawing.Size(225, 186);
-            this.listBoxDataModelItems.TabIndex = 3;
+            this.ChooseDataModelGroupBox.Controls.Add(this.CreateDataModelRadioButton);
+            this.ChooseDataModelGroupBox.Controls.Add(this.UpdateDataModelRadioButton);
+            this.ChooseDataModelGroupBox.Location = new System.Drawing.Point(18, 20);
+            this.ChooseDataModelGroupBox.Name = "ChooseDataModelGroupBox";
+            this.ChooseDataModelGroupBox.Size = new System.Drawing.Size(784, 80);
+            this.ChooseDataModelGroupBox.TabIndex = 12;
+            this.ChooseDataModelGroupBox.TabStop = false;
+            this.ChooseDataModelGroupBox.Text = "Selecione uma opção";
             // 
-            // cmbManageableDataModels
+            // CreateDataModelRadioButton
             // 
-            this.cmbManageableDataModels.FormattingEnabled = true;
-            this.cmbManageableDataModels.Location = new System.Drawing.Point(264, 17);
-            this.cmbManageableDataModels.Name = "cmbManageableDataModels";
-            this.cmbManageableDataModels.Size = new System.Drawing.Size(121, 21);
-            this.cmbManageableDataModels.TabIndex = 2;
+            this.CreateDataModelRadioButton.AutoSize = true;
+            this.CreateDataModelRadioButton.Checked = true;
+            this.CreateDataModelRadioButton.Location = new System.Drawing.Point(10, 24);
+            this.CreateDataModelRadioButton.Name = "CreateDataModelRadioButton";
+            this.CreateDataModelRadioButton.Size = new System.Drawing.Size(157, 17);
+            this.CreateDataModelRadioButton.TabIndex = 10;
+            this.CreateDataModelRadioButton.TabStop = true;
+            this.CreateDataModelRadioButton.Text = "Criar novo modelo de dados";
+            this.CreateDataModelRadioButton.UseVisualStyleBackColor = true;
+            this.CreateDataModelRadioButton.CheckedChanged += new System.EventHandler(this.CreateNewDataModelRadioButton_CheckedChanged);
             // 
-            // lblSelectDataModel
+            // UpdateDataModelRadioButton
             // 
-            this.lblSelectDataModel.AutoSize = true;
-            this.lblSelectDataModel.Location = new System.Drawing.Point(21, 20);
-            this.lblSelectDataModel.Name = "lblSelectDataModel";
-            this.lblSelectDataModel.Size = new System.Drawing.Size(237, 13);
-            this.lblSelectDataModel.TabIndex = 1;
-            this.lblSelectDataModel.Text = "Selecione um modelo de dados para gerenciá-lo:";
+            this.UpdateDataModelRadioButton.AutoSize = true;
+            this.UpdateDataModelRadioButton.Location = new System.Drawing.Point(10, 47);
+            this.UpdateDataModelRadioButton.Name = "UpdateDataModelRadioButton";
+            this.UpdateDataModelRadioButton.Size = new System.Drawing.Size(193, 17);
+            this.UpdateDataModelRadioButton.TabIndex = 11;
+            this.UpdateDataModelRadioButton.Text = "Usar um modelo de dados existente";
+            this.UpdateDataModelRadioButton.UseVisualStyleBackColor = true;
+            this.UpdateDataModelRadioButton.CheckedChanged += new System.EventHandler(this.UpdateDataModelRadioButton_CheckedChanged);
             // 
             // DataModelUserControl
             // 
@@ -221,13 +225,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.DataModelPanel);
             this.Name = "DataModelUserControl";
-            this.Size = new System.Drawing.Size(635, 408);
+            this.Size = new System.Drawing.Size(829, 533);
             this.DataModelPanel.ResumeLayout(false);
-            this.tabControlDataModel.ResumeLayout(false);
-            this.tabPageNewDataModel.ResumeLayout(false);
-            this.tabPageNewDataModel.PerformLayout();
-            this.tabPageManageDataModels.ResumeLayout(false);
-            this.tabPageManageDataModels.PerformLayout();
+            this.DataModelInfoGroupBox.ResumeLayout(false);
+            this.DataModelInfoGroupBox.PerformLayout();
+            this.SelectDataModelPanel.ResumeLayout(false);
+            this.SelectDataModelPanel.PerformLayout();
+            this.ChooseDataModelGroupBox.ResumeLayout(false);
+            this.ChooseDataModelGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -235,21 +240,21 @@
         #endregion
 
         private System.Windows.Forms.Panel DataModelPanel;
-        private System.Windows.Forms.TabControl tabControlDataModel;
-        private System.Windows.Forms.TabPage tabPageNewDataModel;
-        private System.Windows.Forms.Label lblAddingInfo;
-        private System.Windows.Forms.Button btnSaveDataModel;
-        private System.Windows.Forms.Button btnRemoveNewDataItem;
-        private System.Windows.Forms.ListBox listboxDataItems;
-        private System.Windows.Forms.Button btnAddDataItem;
-        private System.Windows.Forms.Label lblDataItemName;
-        private System.Windows.Forms.TextBox txtDataItemName;
-        private System.Windows.Forms.TabPage tabPageManageDataModels;
-        private System.Windows.Forms.Button btnDeleteDataModel;
-        private System.Windows.Forms.Button btnSaveDataModelChanges;
-        private System.Windows.Forms.Button btnRemoveSelectedDataItem;
-        private System.Windows.Forms.ListBox listBoxDataModelItems;
-        private System.Windows.Forms.ComboBox cmbManageableDataModels;
-        private System.Windows.Forms.Label lblSelectDataModel;
+        private System.Windows.Forms.Button SaveDataModelButton;
+        private System.Windows.Forms.Button RemoveNewDataItemButton;
+        private System.Windows.Forms.ListBox NewDataItemsListBox;
+        private System.Windows.Forms.Button AddDataItemButton;
+        private System.Windows.Forms.Label DataItemLabel;
+        private System.Windows.Forms.TextBox DataItemTextBox;
+        private System.Windows.Forms.Button DeleteDataModelButton;
+        private System.Windows.Forms.ComboBox ManageableDataModelsComboBox;
+        private System.Windows.Forms.Label SelectDataModelLabel;
+        private System.Windows.Forms.GroupBox ChooseDataModelGroupBox;
+        private System.Windows.Forms.RadioButton CreateDataModelRadioButton;
+        private System.Windows.Forms.RadioButton UpdateDataModelRadioButton;
+        private System.Windows.Forms.GroupBox DataModelInfoGroupBox;
+        private System.Windows.Forms.Panel SelectDataModelPanel;
+        private System.Windows.Forms.Label DataModelNameLabel;
+        private System.Windows.Forms.TextBox DataModelNameTextBox;
     }
 }
