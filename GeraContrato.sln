@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeraContrato.UI", "GeraCont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeraContrato.BD", "GeraContrato.BD\GeraContrato.BD.csproj", "{213A04FB-3152-489A-A686-FE31C9AA6B4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeraContrato.Model", "GeraContrato.Model\GeraContrato.Model.csproj", "{234915C7-460A-4E6B-A0D1-DAAF29A95912}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeraContrato.Models", "GeraContrato.Model\GeraContrato.Models.csproj", "{234915C7-460A-4E6B-A0D1-DAAF29A95912}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

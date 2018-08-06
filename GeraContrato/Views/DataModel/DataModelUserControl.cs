@@ -127,5 +127,11 @@ namespace GeraContrato.Views
         {
             dataModelPresenter.CommitNew();
         }
+
+        private void DataModelPanel_Paint(object sender, PaintEventArgs e)
+        {
+            DataModelNameTextBox.Text = "";
+            DataModelNameTextBox.Focus();
+        }
     }
 }

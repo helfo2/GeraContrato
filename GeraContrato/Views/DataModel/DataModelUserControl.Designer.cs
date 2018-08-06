@@ -61,6 +61,7 @@
             this.DataModelPanel.Name = "DataModelPanel";
             this.DataModelPanel.Size = new System.Drawing.Size(829, 533);
             this.DataModelPanel.TabIndex = 0;
+            this.DataModelPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DataModelPanel_Paint);
             // 
             // DataModelInfoGroupBox
             // 

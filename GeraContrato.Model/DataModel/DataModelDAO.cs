@@ -57,15 +57,53 @@ namespace GeraContrato.Models.DataModel
             throw new System.NotImplementedException();
         }
 
+        public List<DataModelDTO> SelectAll()
+        {
+            try
+            {
+                _db.Connection.Open();
+
+                string sql = "SELECT * FROM data_model";
+
+                MySqlCommand comm = _db.Connection.CreateCommand();
+                comm.CommandText = sql;
+                
+                MySqlDataReader reader = comm.ExecuteReader();
+
+                List<DataModelDTO> found = new List<DataModelDTO>();
+                DataModelDTO dto;
+                int? id;
+                string name;
+                while (reader.Read())
+                {
+                    id = int.Parse(reader["id"].ToString());
+                    name = reader["name"].ToString();
+
+                    dto = new DataModelDTO
+                    {
+                        Id = id,
+                        Name = name
+                    };
+
+                    found.Add(dto);
+                }
+
+                return found;
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception(ex.ToString());
+            }
+            finally
+            {
+                _db.Close();
+            }
+        }
+
         public List<DataModelDTO> Select(string name)
         {
             throw new System.NotImplementedException();
-        }
-
-        public List<DataModelDTO> SelectAll()
-        {
-            throw new System.NotImplementedException();
-        }
+        }       
 
         public void Update(DataModelDTO obj)
         {

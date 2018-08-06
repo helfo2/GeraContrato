@@ -48,6 +48,7 @@
     <Compile Include="Entities\ContractModel.cs" />
     <Compile Include="Entities\DataModel.cs" />
     <Compile Include="Entities\DataModelItem.cs" />
+    <Compile Include="Helpers\Exceptions\ExistingEntity.cs" />
     <Compile Include="Presenters\ContractModelPresenter.cs" />
     <Compile Include="Presenters\DataModelPresenter.cs" />
     <Compile Include="Views\ContractModel\ContractModelUserControl.cs">
@@ -116,9 +117,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GeraContrato.Model\GeraContrato.Model.csproj">
+    <ProjectReference Include="..\GeraContrato.Model\GeraContrato.Models.csproj">
       <Project>{234915c7-460a-4e6b-a0d1-daaf29a95912}</Project>
-      <Name>GeraContrato.Model</Name>
+      <Name>GeraContrato.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

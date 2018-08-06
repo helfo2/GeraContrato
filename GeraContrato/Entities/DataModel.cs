@@ -1,4 +1,5 @@
 ﻿using GeraContrato.Models.DataModel;
+using System.Collections.Generic;
 
 namespace GeraContrato.Entities
 {
@@ -61,9 +62,9 @@ namespace GeraContrato.Entities
 
         #region Access data methods
 
-        private void GetDTO(DataModelDTO dto)
+        public DataModelDTO GetDTO()
         {
-            
+            return DataModelEntity;
         }
 
         private void SetDTO()
@@ -79,6 +80,11 @@ namespace GeraContrato.Entities
         {
             SetDTO();
             mDataModel.Insert(DataModelEntity);
+        }
+
+        public List<DataModelDTO> FindAll()
+        {
+            return mDataModel.SelectAll();
         }
 
         #endregion
