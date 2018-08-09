@@ -1,2 +1,0 @@
-C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.DB\obj\Debug\GeraContrato.DB.csprojResolveAssemblyReference.cache
-C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.DB\obj\Debug\GeraContrato.DB.csproj.CoreCompileInputs.cache

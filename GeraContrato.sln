@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeraContrato.UI", "GeraContrato\GeraContrato.UI.csproj", "{7E853C5E-65FF-4764-B503-14AC2E93F8FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeraContrato.BD", "GeraContrato.BD\GeraContrato.BD.csproj", "{213A04FB-3152-489A-A686-FE31C9AA6B4D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeraContrato.DB", "GeraContrato.BD\GeraContrato.DB.csproj", "{213A04FB-3152-489A-A686-FE31C9AA6B4D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeraContrato.Models", "GeraContrato.Model\GeraContrato.Models.csproj", "{234915C7-460A-4E6B-A0D1-DAAF29A95912}"
 EndProject

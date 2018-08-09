@@ -10,7 +10,6 @@ C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.Model\bin\Debug
 C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.Model\bin\Debug\EntityFramework.xml
 C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.Model\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.Model\bin\Debug\MySql.Data.xml
-C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.Model\obj\Debug\GeraContrato.Models.csprojResolveAssemblyReference.cache
 C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.Model\obj\Debug\GeraContrato.Models.csproj.CoreCompileInputs.cache
 C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.Model\obj\Debug\GeraContrato.Model.dll
 C:\Users\ELFO\Documents\sistemas_joana\GeraContrato\GeraContrato.Model\obj\Debug\GeraContrato.Model.pdb

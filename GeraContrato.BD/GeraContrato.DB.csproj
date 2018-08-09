@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{234915C7-460A-4E6B-A0D1-DAAF29A95912}</ProjectGuid>
+    <ProjectGuid>{213A04FB-3152-489A-A686-FE31C9AA6B4D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GeraContrato.Model</RootNamespace>
-    <AssemblyName>GeraContrato.Model</AssemblyName>
+    <RootNamespace>GeraContrato.BD</RootNamespace>
+    <AssemblyName>GeraContrato.BD</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,18 +30,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 8.0.12\Assemblies\v4.5.2\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,21 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataModel\DataModelDAO.cs" />
-    <Compile Include="DataModelItem\DataModelItemDAO.cs" />
-    <Compile Include="DataModel\DataModelDTO.cs" />
-    <Compile Include="DataModelItem\DataModelItemDTO.cs" />
+    <Compile Include="Base\DBConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\GeraContrato.BD\GeraContrato.DB.csproj">
-      <Project>{213A04FB-3152-489A-A686-FE31C9AA6B4D}</Project>
-      <Name>GeraContrato.DB</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
+    <Compile Include="Utility\IBasicCommands.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

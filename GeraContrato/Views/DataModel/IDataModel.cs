@@ -13,7 +13,7 @@ namespace GeraContrato.Views.DataModel
 
         string Item { get; set; }
 
-        string SelectedNewItem { get; }        
+        string SelectedNewItem { get; }
         
         ListBox DataItems { get; }
 
