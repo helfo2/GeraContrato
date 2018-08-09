@@ -1,5 +1,8 @@
 ﻿using GeraContrato.Models.DataModel;
+using GeraContrato.Models.DataModelItem;
+using System;
 using System.Collections.Generic;
+using System.Data;
 
 namespace GeraContrato.Entities
 {
@@ -8,6 +11,8 @@ namespace GeraContrato.Entities
         #region Data access members
 
         private DataModelDAO mDataModel;
+        private List<DataModelItemDTO> dataModelItems;
+
         public DataModelDTO DataModelEntity;
 
         #endregion
@@ -18,6 +23,7 @@ namespace GeraContrato.Entities
         {
             mDataModel = new DataModelDAO();
             DataModelEntity = new DataModelDTO();
+            dataModelItems = new List<DataModelItemDTO>();
         }
 
         #endregion
@@ -76,6 +82,15 @@ namespace GeraContrato.Entities
             };           
         }
 
+        public void SetEntityDTO(int id)
+        {
+            DataModelEntity = new DataModelDTO
+            {
+                Id = id,
+                Name = Name
+            };
+        }
+
         public void NewDataModel()
         {
             SetDTO();
@@ -85,6 +100,65 @@ namespace GeraContrato.Entities
         public List<DataModelDTO> FindAll()
         {
             return mDataModel.SelectAll();
+        }
+
+        public DataTable LoadDataModels()
+        {
+            return mDataModel.SelectAllIntoDataTable();
+        }
+
+        public Tuple<int?, string> Find(int id)
+        {
+            DataModelEntity = mDataModel.Select(id);
+            
+            return new Tuple<int?, string>(DataModelEntity.Id, DataModelEntity.Name);
+        }
+
+        public DataModelDTO GetNew()
+        {
+            return mDataModel.GetInsertedDataModel();
+        }
+
+        public void Delete()
+        {
+            mDataModel.Delete(DataModelEntity);
+        }
+
+        public void Update(List<string> dataItems)
+        {
+            dataModelItems = new List<DataModelItemDTO>();
+
+            foreach (var item in dataItems)
+            {
+                dataModelItems.Add(new DataModelItemDTO { Id = null, Name = item });
+            }
+
+            dataModelItems.ForEach(i => i.DataModel = Convert_DataModelToDTO(new DataModel { Id = DataModelEntity.Id, Name = DataModelEntity.Name }));
+            mDataModel.FullUpdate(DataModelEntity, dataModelItems);
+        }
+
+        public List<DataModelItemDTO> SelectDataItems()
+        {
+            return mDataModel.SelectDataItems(DataModelEntity);
+        }
+
+
+        public DataModel Convert_DTOToDataModel(DataModelDTO dto)
+        {
+            return new DataModel()
+            {
+                Id = dto.Id,
+                Name = dto.Name
+            };
+        }
+
+        public DataModelDTO Convert_DataModelToDTO(DataModel dataModel)
+        {
+            return new DataModelDTO()
+            {
+                Id = dataModel.Id,
+                Name = dataModel.Name
+            };
         }
 
         #endregion

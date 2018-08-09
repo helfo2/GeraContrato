@@ -96,7 +96,6 @@ namespace GeraContrato.Entities
 
         public void NewDataModelItem(DataModelItemDTO dto)
         {
-            SetDTO();
             mDataModelItem.Insert(dto);
         }
 

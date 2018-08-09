@@ -55,13 +55,60 @@ namespace GeraContrato.Views
             }            
         }
 
-        public string NewSelectedItem
+        public string SelectedNewItem
         {
             get
             {
                 return NewDataItemsListBox.SelectedItem.ToString();
             }            
-        }    
+        }
+
+        public ComboBox DataModels
+        {
+            get
+            {
+                return ManageableDataModelsComboBox;
+            }
+
+            set
+            {
+                if(ManageableDataModelsComboBox != value)
+                {
+                    ManageableDataModelsComboBox = value;
+                }
+            }
+        }
+
+        public int? Id
+        {
+            get
+            {
+                return int.Parse(IdLabel.Text);
+            }
+            set
+            {
+                if(value.HasValue && IdLabel.Text != value.Value.ToString())
+                {
+                   IdLabel.Text = value.ToString();
+                }
+            }
+        }
+
+        public Panel DataModelInfo
+        {
+            get
+            {
+                return DataModelInfo;
+            }            
+        }
+
+        public Panel DataModelsInfo
+        {
+            get
+            {
+                return SelectDataModelPanel;
+            }
+        }
 
         #endregion
 
@@ -70,8 +117,12 @@ namespace GeraContrato.Views
         private DataModelPresenter dataModelPresenter;
 
         private BindingSource dataItemsSource;
+        
+        private bool IsEditMode;
 
         #endregion
+
+        #region Constructor
 
         public DataModelUserControl()
         {
@@ -80,6 +131,10 @@ namespace GeraContrato.Views
 
             SetDefaultConfig();
         }
+
+        #endregion
+
+        #region Methods
 
         private void SetDefaultConfig()
         {
@@ -93,16 +148,35 @@ namespace GeraContrato.Views
             DeleteDataModelButton.Hide();
         }
 
+        public void FillDataModelNames()
+        {
+            DataModels = new ComboBox();
+            dataModelPresenter.LoadDataModels();
+        }
+
+        #endregion
+
+        #region Events
+
+        private void DataModelPanel_Paint(object sender, PaintEventArgs e)
+        {
+            DataModelNameTextBox.Text = "";
+            DataModelNameTextBox.Focus();
+        }
+
         private void AddDataItemButton_Click(object sender, EventArgs e)
         {
             dataModelPresenter.AddItemToList();
             dataItemsSource.ResetBindings(false);
+
+            Item = "";
+            DataItemTextBox.Focus();
         }
 
         private void RemoveNewDataItemButton_Click(object sender, EventArgs e)
         {
             dataModelPresenter.RemoveItemFromList();
-            dataItemsSource.ResetBindings(false);
+            dataItemsSource.ResetBindings(true);
         }
 
         private void CreateNewDataModelRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -111,7 +185,14 @@ namespace GeraContrato.Views
             {
                 SelectDataModelPanel.Hide();
                 DataModelInfoGroupBox.Show();
-            }            
+
+                EditionModeLabel.Visible = false;
+                DeleteDataModelButton.Hide();
+
+                dataModelPresenter.ClearAll();
+
+                IsEditMode = true;
+            }
         }
 
         private void UpdateDataModelRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -120,18 +201,61 @@ namespace GeraContrato.Views
             {
                 SelectDataModelPanel.Show();
                 DataModelInfoGroupBox.Hide();
-            }            
+                
+                DeleteDataModelButton.Show();
+
+                dataModelPresenter.ClearAll();
+                dataModelPresenter.LoadDataModels();               
+            }
         }
 
         private void SaveDataModelButton_Click(object sender, EventArgs e)
         {
-            dataModelPresenter.CommitNew();
+            if(IsEditMode)
+            {
+                dataModelPresenter.UpdateDataModel(Id ?? -1);
+            }
+            else
+            {
+                dataModelPresenter.CommitNew();
+            }
+        }
+        
+        private void ManageableDataModelsComboBox_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            ComboBox cmb = (ComboBox)sender;
+            var id = int.Parse(cmb.SelectedValue.ToString());
+
+            if (dataModelPresenter.FindDataModel(id))
+            {
+                IsEditMode = true;
+
+                EditionModeLabel.Visible = true;
+                DataModelInfoGroupBox.Show();
+            }
         }
 
-        private void DataModelPanel_Paint(object sender, PaintEventArgs e)
+        private void DeleteDataModelButton_Click(object sender, EventArgs e)
         {
-            DataModelNameTextBox.Text = "";
-            DataModelNameTextBox.Focus();
-        }
+            ComboBox cmb = DataModels;
+
+            if(cmb.SelectedValue != null)
+            {
+                var id = int.Parse(cmb.SelectedValue.ToString());
+
+                if (MessageBox.Show("Certeza de que deseja deletar este modelo de dados? Não é possível desfazer essa ação", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    dataModelPresenter.DeleteDataModel(id);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Nenhum modelo de dados selecionado", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                return;
+            }
+        }        
+
+        #endregion
+
     }
 }

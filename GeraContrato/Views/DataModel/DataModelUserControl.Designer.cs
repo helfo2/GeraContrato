@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.DataModelPanel = new System.Windows.Forms.Panel();
+            this.IdLabel = new System.Windows.Forms.Label();
             this.DataModelInfoGroupBox = new System.Windows.Forms.GroupBox();
+            this.EditionModeLabel = new System.Windows.Forms.Label();
             this.DataModelNameLabel = new System.Windows.Forms.Label();
             this.DataModelNameTextBox = new System.Windows.Forms.TextBox();
             this.DataItemLabel = new System.Windows.Forms.Label();
@@ -53,6 +55,7 @@
             // 
             // DataModelPanel
             // 
+            this.DataModelPanel.Controls.Add(this.IdLabel);
             this.DataModelPanel.Controls.Add(this.DataModelInfoGroupBox);
             this.DataModelPanel.Controls.Add(this.SelectDataModelPanel);
             this.DataModelPanel.Controls.Add(this.ChooseDataModelGroupBox);
@@ -63,8 +66,18 @@
             this.DataModelPanel.TabIndex = 0;
             this.DataModelPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.DataModelPanel_Paint);
             // 
+            // IdLabel
+            // 
+            this.IdLabel.AutoSize = true;
+            this.IdLabel.Location = new System.Drawing.Point(309, 103);
+            this.IdLabel.Name = "IdLabel";
+            this.IdLabel.Size = new System.Drawing.Size(0, 13);
+            this.IdLabel.TabIndex = 14;
+            this.IdLabel.Visible = false;
+            // 
             // DataModelInfoGroupBox
             // 
+            this.DataModelInfoGroupBox.Controls.Add(this.EditionModeLabel);
             this.DataModelInfoGroupBox.Controls.Add(this.DataModelNameLabel);
             this.DataModelInfoGroupBox.Controls.Add(this.DataModelNameTextBox);
             this.DataModelInfoGroupBox.Controls.Add(this.DataItemLabel);
@@ -79,6 +92,17 @@
             this.DataModelInfoGroupBox.TabIndex = 7;
             this.DataModelInfoGroupBox.TabStop = false;
             this.DataModelInfoGroupBox.Text = "Modelo de Dados";
+            // 
+            // EditionModeLabel
+            // 
+            this.EditionModeLabel.AutoSize = true;
+            this.EditionModeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditionModeLabel.Location = new System.Drawing.Point(222, 57);
+            this.EditionModeLabel.Name = "EditionModeLabel";
+            this.EditionModeLabel.Size = new System.Drawing.Size(148, 13);
+            this.EditionModeLabel.TabIndex = 9;
+            this.EditionModeLabel.Text = "Modo de edição ativado!";
+            this.EditionModeLabel.Visible = false;
             // 
             // DataModelNameLabel
             // 
@@ -146,7 +170,7 @@
             this.SaveDataModelButton.Name = "SaveDataModelButton";
             this.SaveDataModelButton.Size = new System.Drawing.Size(161, 65);
             this.SaveDataModelButton.TabIndex = 5;
-            this.SaveDataModelButton.Text = "Criar modelo de dados";
+            this.SaveDataModelButton.Text = "Confirmar modelo de dados";
             this.SaveDataModelButton.UseVisualStyleBackColor = true;
             this.SaveDataModelButton.Click += new System.EventHandler(this.SaveDataModelButton_Click);
             // 
@@ -176,6 +200,7 @@
             this.ManageableDataModelsComboBox.Name = "ManageableDataModelsComboBox";
             this.ManageableDataModelsComboBox.Size = new System.Drawing.Size(234, 21);
             this.ManageableDataModelsComboBox.TabIndex = 2;
+            this.ManageableDataModelsComboBox.SelectionChangeCommitted += new System.EventHandler(this.ManageableDataModelsComboBox_SelectionChangeCommitted);
             // 
             // DeleteDataModelButton
             // 
@@ -185,6 +210,7 @@
             this.DeleteDataModelButton.TabIndex = 9;
             this.DeleteDataModelButton.Text = "Deletar este modelo de dados";
             this.DeleteDataModelButton.UseVisualStyleBackColor = true;
+            this.DeleteDataModelButton.Click += new System.EventHandler(this.DeleteDataModelButton_Click);
             // 
             // ChooseDataModelGroupBox
             // 
@@ -229,6 +255,7 @@
             this.Name = "DataModelUserControl";
             this.Size = new System.Drawing.Size(829, 533);
             this.DataModelPanel.ResumeLayout(false);
+            this.DataModelPanel.PerformLayout();
             this.DataModelInfoGroupBox.ResumeLayout(false);
             this.DataModelInfoGroupBox.PerformLayout();
             this.SelectDataModelPanel.ResumeLayout(false);
@@ -258,5 +285,7 @@
         private System.Windows.Forms.Panel SelectDataModelPanel;
         private System.Windows.Forms.Label DataModelNameLabel;
         private System.Windows.Forms.TextBox DataModelNameTextBox;
+        private System.Windows.Forms.Label IdLabel;
+        private System.Windows.Forms.Label EditionModeLabel;
     }
 }

@@ -8,7 +8,7 @@ namespace GeraContrato.DB.Utility
         void Delete(T obj);
         void Update(T obj);
         List<T> SelectAll();
-        List<T> Select(int id);
+        T Select(int id);
         List<T> Select(string name);
     }
 }
